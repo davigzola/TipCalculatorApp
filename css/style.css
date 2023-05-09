@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Space Mono", sans-serif;
+}
+
+body {
+    background-color: hsl(185, 41%, 84%);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+    margin: 7% 0 5rem 0;
+}
+
+.white-box {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3rem;
+    background-color: hsl(0, 0%, 100%);
+    width: 40rem;
+    height: 25rem;
+    border-radius: 20px;
+    padding: 35px;
+    width: 63rem;
+    height: 30rem;
+}
+
+.white-box-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-left: 30px;
+}
+
+.white-box-left h2 {
+    font-size: 15px;
+    padding-left: 3px;
+    margin: 8px 0;
+    color: hsl(186, 14%, 43%);
+}
+
+.bill img {
+    position: absolute;
+    padding: 17px 0 0 18px;
+}
+
+.bill input[type="number"] {
+    padding: 5px 20px 5px 120px;
+    text-align: right;
+    border: 2px solid hsl(189, 41%, 97%);
+    background-color: hsl(189, 41%, 97%);
+    border-radius: 10px;
+    font-size: 24px;
+    color: hsl(183, 100%, 15%);
+    transition: 0.5s;
+}
+
+.bill input[type="number"]:hover {
+    border: 2px solid hsl(172, 67%, 45%);
+    cursor: pointer;
+}
+
+.bill input[type="number"]:focus {
+    outline: 0;
+    border: 2px solid hsl(172, 67%, 45%);
+    cursor: text;
+}
+
+.bill input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none
+}
+
+.tip {
+    display: grid;
+    grid-template-areas:
+    "a b c"
+    "d e f";
+    gap: 1rem;
+}
+
+.tip label {
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(183, 100%, 15%);
+    font-size: 26px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.tip label:hover {
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(185, 41%, 84%);
+    cursor: pointer;
+}
+
+.number-of-people img {
+    position: absolute;
+    padding: 17px 0 0 18px;
+}
+
+.number-of-people input[type="number"] {
+    padding: 5px 20px 5px 120px;
+    text-align: right;
+    font-size: 24px;
+    border: 2px solid hsl(189, 41%, 97%);
+    background-color: hsl(189, 41%, 97%);
+    color: hsl(183, 100%, 15%);
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.number-of-people input[type="number"]:hover {
+    border: 2px solid hsl(172, 67%, 45%);
+    cursor: pointer;
+}
+
+.number-of-people input[type="number"]:focus {
+    outline: 0;
+    border: 2px solid hsl(172, 67%, 45%);
+    cursor: text;
+}
+
+.number-of-people input[type=number]::-webkit-inner-spin-button { 
+    -webkit-appearance: none
+}
+
+.cyan-box-right {
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.cyan-box-tip-amount h2 {
+    position: relative;
+    padding: 80px 0 0 50px;
+    font-size: 15px;
+    color: hsl(0, 0%, 100%);
+}
+
+.cyan-box-total h2 {
+    position: relative;
+    padding: 60px 0 0 50px;
+    font-size: 15px;
+    color: hsl(0, 0%, 100%);
+}
+
+.cyan-box-right p {
+    position: relative;
+    padding: 0 0 0 50px ;
+    font-size: 15px;
+    color: hsl(184, 14%, 56%);
+}
+
+.cyan-box-right span {
+    color: hsl(172, 67%, 45%);
+}
+
+.cyan-box-tip-amount {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cyan-box-tip-amount span {
+    font-size: 40px;
+    padding: 65px 50px 0 0;
+}
+
+.cyan-box-total {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cyan-box-total span {
+    font-size: 40px;
+    padding: 45px 50px 0 0;
+}
+
+.cyan-box-button {
+    position: relative;
+    margin: 95px 0 0 50px;
+}
+
+.cyan-box-button button {
+    border: none;
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(172, 67%, 45%);
+    border-radius: 10px;
+    padding: 10px 130px;
+    text-transform: uppercase;
+    font-size: 20px;
+    grid-column: 1fr;
+    transition: 0.5s;
+} 
+
+.cyan-box-button button:hover {
+    background-color: hsl(185, 41%, 84%);
+}

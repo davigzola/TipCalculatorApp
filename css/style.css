@@ -9,7 +9,6 @@
 body {
     background-color: hsl(185, 41%, 84%);
     box-sizing: border-box;
-    height: 100vh;
 }
 
 main {
@@ -18,7 +17,6 @@ main {
     align-items: center;
     justify-content: space-between;
     gap: 5rem;
-    margin: 6% 0 5rem 0;
 }
 
 .white-box {
@@ -28,10 +26,8 @@ main {
     justify-content: space-between;
     gap: 3rem;
     background-color: hsl(0, 0%, 100%);
-    width: 40rem;
-    height: 25rem;
     border-radius: 20px;
-    padding: 35px;
+    padding: 30px;
     width: 63rem;
     height: 30rem;
 }
@@ -40,13 +36,15 @@ main {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding-left: 30px;
+    padding-left: 0;
+    box-sizing: border-box;
+
 }
 
 .white-box-left h2 {
     font-size: 15px;
     padding-left: 3px;
-    margin: 8px 0;
+    margin: 8px 0 0 0;
     color: hsl(186, 14%, 43%);
 }
 
@@ -81,11 +79,42 @@ main {
     -webkit-appearance: none
 }
 
+.select-tip input[type="number"] {
+    text-align: center;
+    border: 2px solid hsl(189, 41%, 97%);
+    background-color: hsl(189, 41%, 97%);
+    font-size: 24px;
+    border-radius: 10px;
+    color: hsl(183, 100%, 15%);
+    transition: 0.5s;
+}
+
+.select-tip input[type="number"]::placeholder {
+    font-size: 24px;
+}
+
+.select-tip input[type="number"]:hover {
+    border: 2px solid hsl(172, 67%, 45%);
+    cursor: pointer;
+}
+
+.select-tip input[type="number"]:focus {
+    outline: none;
+    border: 2px solid hsl(172, 67%, 45%);
+    cursor: text;
+}
+
+.select-tip input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none
+}
+
+.select-tip label {
+    text-align: center;
+}
+
 .tip {
     display: grid;
-    grid-template-areas:
-    "a b c"
-    "d e f";
+    grid-template-columns: 26.5% 26.5% 26.5%;
     gap: 1rem;
 }
 
@@ -102,6 +131,11 @@ main {
     color: hsl(183, 100%, 15%);
     background-color: hsl(185, 41%, 84%);
     cursor: pointer;
+}
+
+.tip input[type="radio"]:checked+label {
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(172, 67%, 45%);
 }
 
 .number-of-people img {
@@ -189,7 +223,7 @@ main {
 
 .cyan-box-button {
     position: relative;
-    margin: 95px 0 0 50px;
+    margin: 95px 0 0 45px;
 }
 
 .cyan-box-button button {
@@ -197,7 +231,7 @@ main {
     color: hsl(183, 100%, 15%);
     background-color: hsl(172, 67%, 45%);
     border-radius: 10px;
-    padding: 10px 130px;
+    padding: 10px 115px;
     text-transform: uppercase;
     font-size: 20px;
     transition: 0.5s;
@@ -208,27 +242,78 @@ main {
     cursor: pointer;
 }
 
+.attribution {
+    margin-top: 50px;
+}
+
+@media screen and (min-width: 1020px) {
+    
+    body {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+}
+
 @media screen and (max-width: 1020px) {
+
+    body {
+        margin: 80px 0 0 0;
+        width: 100vw;
+        height: 100vh;
+    }
+
     .white-box {
-        width: 100%;
-        height: 60rem;
-        border-radius: 40px;
+        width: 100% ;
+        height: 100%;
+        border-radius: 40px 40px 0 0;
         display: flex;
         flex-direction: column;
-        box-sizing: border-box;
-        justify-content: flex-start;
+        padding: 5% 5%;
+    }
+
+    .bill {
+        text-align: center;
+    }
+
+    .bill img {
+        margin: 36px 0 0 18px;
     }
 
     .bill input[type="number"] {
-        padding: 5px 20px 5px 45px
+        margin-top: 20px;
+        padding: 5px 2.5% 5px 5%
+    }
+
+    .select-tip {
+        text-align: center;
+    }
+
+    .tip {
+        display: grid;
+        grid-template-columns: 47.4% 47.4% ;
+        gap: 1rem;
+        margin-top: 20px
+    }
+
+    .number-of-people {
+        text-align: center;
+    }
+
+    .number-of-people img {
+        padding: 36px 0 0 18px;
     }
 
     .number-of-people input[type="number"] {
-        padding: 5px 20px 5px 45px
+        margin-top: 20px;
+        padding: 5px 2.5% 5px 5%
     }
 
     .cyan-box-right {
         height: 40%;
+        margin-bottom: 50px;
     }
 
     .cyan-box-tip-amount h2 {
@@ -247,10 +332,18 @@ main {
 
     .cyan-box-button {
         position: relative;
-        margin: 30px 0 0 50px;
+        margin: 60px 0 20px 0;
+        text-align: center;
     }
 
     .cyan-box-button button {
-        padding: 15px 130px;
+        padding: 20px 30%;
+    }
+
+    .attribution {
+        display: absolute;
+        margin: 0;
+        padding-bottom: 60px;
+        background-color: hsl(0, 0%, 100%);
     }
 }

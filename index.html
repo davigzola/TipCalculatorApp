@@ -2,11 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
-  <title>Frontend Mentor | Tip calculator app</title>
+  <title>Tip calculator app | davigzola</title>
 
   <link rel="stylesheet" href="./css/style.css">
 
@@ -23,58 +22,58 @@
     </div>
     <div class="white-box">
       <div class="white-box-left">
-        <div class="bill">
+        <section class="bill">
           <h2>Bill</h2>
           <img src="./images/icon-dollar.svg" alt="">
           <input type="number" placeholder="0.00">
-        </div>
-        <div class="select-tip">
+        </section>
+        <section class="select-tip">
           <h2>Select Tip %</h2>
           <div class="tip">
 
-            <input type="radio" name="tip-percentage" id="5%" hidden>
+            <input type="radio" name="tip-percentage" id="5%" value="5" hidden>
             <label for="5%">5%</label>
             
-            <input type="radio" name="tip-percentage" id="10%" hidden>
+            <input type="radio" name="tip-percentage" id="10%" value="10" hidden>
             <label for="10%">10%</label>
             
-            <input type="radio" name="tip-percentage" id="15%" hidden>
+            <input type="radio" name="tip-percentage" id="15%" value="15" hidden>
             <label for="15%">15%</label>
             
-            <input type="radio" name="tip-percentage" id="25%" hidden>
+            <input type="radio" name="tip-percentage" id="25%" value="25" hidden>
             <label for="25%">25%</label>
 
-            <input type="radio" name="tip-percentage" id="50%" hidden>
+            <input type="radio" name="tip-percentage" id="50%" value="50" hidden>
             <label for="50%">50%</label>
             
-            <input type="number" placeholder="Custom">
+            <input type="number" placeholder="Custom" name="tip-percentage">
           </div>
-        </div>
-        <div class="number-of-people">
+        </section>
+        <section class="number-of-people">
           <h2>Number of People</h2>
           <img src="./images/icon-person.svg" alt="">
           <input type="number" placeholder="1">
-        </div>
+        <section>
       </div>
       <div class="cyan-box-right">
-        <div class="cyan-box-tip-amount">
+        <section class="cyan-box-tip-amount">
           <div>
             <h2>Tip Amount</h2>
             <p>/ person</p>
           </div>
           <span>$0.00</span>
-        </div>
-        <div class="cyan-box-total">
+        </section>
+        <section class="cyan-box-total">
           <div>
             <h2>Total</h2>
             <p>/ person</p>
           </div>
           <span>$0.00</span>
-        </div>
-        <div class="cyan-box-button">
+        </section>
+        <section class="cyan-box-button">
           <button>Reset</button>
-        </div>
-    </div>
+        </section>
+      </div>
   </main>
   <footer>
     <div class="attribution">
@@ -82,5 +81,6 @@
       Coded by <a href="#">Davi Gazola</a>.
     </div>
   </footer>
+  <script src="./js/script.js"></script>
 </body>
 </html>

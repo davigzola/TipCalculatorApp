@@ -1,33 +1,18 @@
-var bill = document.querySelector(".bill input[type=number]");
+const inputBill = document.querySelector("#input-bill")
+const inputNumberOfPeople = document.querySelector("#input-number-of-people")
 
-var numberOfPeople = document.querySelector(".number-of-people input[type=number]");
+inputBill.addEventListener("input", fInputBill);
+inputNumberOfPeople.addEventListener("input", fInputNumberOfPeople);
 
-var selectTip = document.querySelector(".tip");
+let inputValue =  0.0;
+let numberOfPeopleValue = 1
 
-var tipAmount = document.querySelector(".cyan-box-tip-amount span");
-
-var totalAmount = document.querySelector(".cyan-box-total span");
-
-bill.onchange = ()=> {
-    var billValue = bill.value;
-    sessionStorage.setItem("billValue", billValue);
-    console.log(billValue);
+function fInputBill() {
+    inputValue = parseFloat(inputBill.value)
+    console.log(inputValue);
 }
 
-selectTip.onchange = ()=> {
-    var selectedTip = document.querySelector("input[type = radio]:checked").value;
-    sessionStorage.setItem("selectedTip", selectedTip);
-    console.log(selectedTip);
-}
-
-numberOfPeople.onchange = ()=> {
-    var numberOfPeopleValue = numberOfPeople.value;
-    sessionStorage.setItem("numberOfPeopleValue",  numberOfPeopleValue);
+function fInputNumberOfPeople() {
+    numberOfPeopleValue = parseFloat(inputNumberOfPeople.value)
     console.log(numberOfPeopleValue);
 }
-
-var billValue = sessionStorage.getItem("billValue");
-
-var selectedTip = sessionStorage.getItem("selectedTip");
-
-var numberOfPeopleValue = sessionStorage.getItem("numberOfPeopleValue");

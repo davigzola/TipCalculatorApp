@@ -82,7 +82,7 @@ main {
 .select-tip input[type="number"] {
     text-align: center;
     border: 2px solid hsl(189, 41%, 97%);
-    background-color: hsl(189, 41%, 97%);
+    background-color: hsl(189, 41%, 97%);;
     font-size: 24px;
     border-radius: 10px;
     color: hsl(183, 100%, 15%);
@@ -96,6 +96,7 @@ main {
 .select-tip input[type="number"]:hover {
     border: 2px solid hsl(172, 67%, 45%);
     cursor: pointer;
+    transition: 0.5s;
 }
 
 .select-tip input[type="number"]:focus {
@@ -106,6 +107,14 @@ main {
 
 .select-tip input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none
+}
+
+#custom-active {
+    background-color: hsl(172, 67%, 45%);
+}
+
+#custom-active::placeholder {
+    color: hsl(183, 100%, 15%);
 }
 
 .select-tip label {
